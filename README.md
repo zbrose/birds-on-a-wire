@@ -19,8 +19,7 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   
 # Wireframes
   
-![song bird wireframe](file:///Users/zachbrose/Downloads/song%20birds%20.jpg
-
+![song bird wireframe](file:///Users/zachbrose/Downloads/song%20birds%20.jpg)
 
 ## MPV Goals
   - Get all button functionality working
