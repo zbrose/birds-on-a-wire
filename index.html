@@ -11,29 +11,69 @@
 <body>
 
     <h1> Song-Birds</h1>
-
+    
+    <!-- <img class="clouds" src="clouds background.jpeg" alt="clouds"> -->
+    
+    <div class="instructions">
+        <h2>Welcome to Songbirds!</h2>
+        <p> Push the 'play melody' button and listen carefully to the melody.  Then, use your birds to match the melody's pitches!</p>
+    </div>
     <div class="'container">
+       
+       
         <div class="top-row">
-            <div id="level-display" class="display">Level: 1</div>
-            <button id="call-button">Play Melody</button>
-            <div id="controls-display" class="display">Controls:</div>
+            <div id="level-display" class="display">
+                <h2>Level: 1</h3>
+                </div>
+           
+            <audio class="melody" controls> Press to play melody
+                <source src="Rhode_keyCMaj_74bpm.wav">
+            </audio>
+
+            <div id="controls-display" class="display">
+                <h2>Controls: </h2>
+                <p>QWERTY</p> 
+            </div>
          </div>
+       
+       
+       
          <div class = "middle-row">
              <div id="notation-display" class="display">
-                <img src="https://i.pinimg.com/originals/a5/7c/c6/a57cc65c83ef32162d7652935467a96e.png"  alt="Music Staff"/>
+                <img src="musicstaff.png"  alt="Music Staff"/>
              </div>
          </div>
+      
+       
+       
          <div class="bottom-row">
-             <div id="bird1" class="bird">Bird 1
-                 
+             <div id="bird1" class="bird">
+                 <img src="WesternTanager.png" alt="Western Tanager" width=150px height=150px>
+                 <h2>C</h2>
              </div>
-             <div id="bird2" class="bird">Bird 2</div>
-             <div id="bird3" class="bird">Bird 3</div>
-             <div id="bird4" class="bird">Bird 4</div>
-             <div id="bird5" class="bird">Bird 5</div>
-             <div id="bird6" class="bird">Bird 6</div>
+             <div id="bird2" class="bird">
+                <img src="ScrubJay.png" alt="Scrub Jay" width=150px height=150px>
+                <h2>D</h2>
+             </div>
+             <div id="bird3" class="bird">
+                <img src="SpottedTowhee.png" alt="Spotted Towhee" width=150px height=150px>
+                <h2>E</h2>
+             </div>
+             <div id="bird4" class="bird">
+                <img src="HoodedOriole.png" alt="Hooded Oriole" width=150px height=150px>
+                <h2>G</h2>
+             </div>
+             <div id="bird5" class="bird">
+                <img src="YellowRumpedWarbler.png" alt="Warbler" width=150px height=150px>
+                <h2>A</h2>
+             </div>
+             <div id="bird6" class="bird">
+                <img src="allens Hummingbird.png" alt="Hummingbird" width=150px height=150px>
+                <h2>C</h2>
+             </div>
          </div>
-         <footer></footer>
+
+         
      </div>
 
 
