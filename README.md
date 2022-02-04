@@ -9,15 +9,26 @@
   - Create a button that lets the user play the level 1 bird call as many times as they like
   - Use one row of keyboard keys to let user make musical note selections - QWERTY or the like
   - Conditions for winning: Keep track of which notes have been hit and in what order and measure its combination with that of a winning combination
+  - If combination of user notes doesnt match order - clear player choice and start over
   - Add audio into the functionality - a line of 3 notes for the intital bird call and single notes for user bird choice
   - Create only one level for this project
   - Create a display that will display a message of note choice and if the combination of notes is correct or not
   - Have a simple design - images of actual birds for the birds elements, hoping to animate when the user chooses respective bird and add musical note imagery
   - Create a small display for control instructions
   - Create an instructions page at the game start
+  
+   
+
+# Wireframes
+  
+
+![birds on a wire frame_1](https://user-images.githubusercontent.com/97310057/152467488-60f9e940-12f7-41ab-b7da-c1d008ba65b6.jpg)
 
 ## MPV Goals
-  - 
+  - Get all button functionality working
+  - Display correct combo or win conditions and note choices in real time.
+  - Successfully have an audio component when you click a key or button
+  - Successfully track and execute win conditions function
 
 ## Stretch Goals
   - Create more than one level
