@@ -41,4 +41,4 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - making game animated and fun to play
   - tracking and measuring win conditions
   - applying functionality to keys in a succinct way
-  
+  - getting musical notation to display correctly and in order of key stroke
