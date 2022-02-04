@@ -75,11 +75,14 @@ h1{
 
 
 .bird {
-    
+    text-align: center;
     height: 5vh;
     width: 5vw;
     margin-top: 3rem;
+    filter: grayscale(0%);
     
 }
+
+
 
 
