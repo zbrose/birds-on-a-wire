@@ -17,9 +17,11 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - Create a small display for control instructions
   - Have a simple design - images of actual birds for the birds elements, hoping to animate when the user chooses respective bird and add musical note imagery
   
-# Wireframes
-  
-![song bird wireframe](https:///Users/zachbrose/Downloads/song%20birds%20.jpg)
+# Wireframe
+
+![song birds ](https://user-images.githubusercontent.com/97310057/152473456-58e32f14-0022-4c2b-b780-a639838dfe45.jpg)
+
+
 
 ## MPV Goals
   - Get all button functionality working
