@@ -1,6 +1,6 @@
 # SEI Project 1 - Birds on a Wire
 
- **Birds on a Wire** is an educational music game that helps you improve your ear for melodies.  The object of the game is to listen to a distant bird call and match the melody using your birds' beautiful singing voices.  In order to move onto the next level, players must play the notes in the correct order.  
+ **Birds on a Wire** is an educational music game that helps you improve your ear for melodies.  The object of the game is to listen to a distant bird call and match the melody using your birds' beautiful singing voices.  Each one of your birds is assigned a musical note.  In order to move onto the next level, players must communicate with the distant bird by matching it's call.  
 
 ## Technical Plan
   - Use DOM api for functionality 
@@ -33,4 +33,10 @@
   - animate birds and notes more fully
   - have animated bird celebration if user wins 
   - create generative cloud background making clouds pass by
+
+## Potential Roadblocks
+  - Not being able to get audio working 
+  - making game animated and fun to play
+  - tracking and measuring win conditions
+  - applying functionality to keys in a succinct way
   
