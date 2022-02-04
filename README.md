@@ -1,6 +1,6 @@
 # SEI Project 1 - Song Birds
 
-_Song Birds_ is an educational music game that helps you improve your ear for melodies.  The player is able to control six birds on a wire and each one  is assigned a single musical note. The object of the game is to listen to a distant birds' melody of three to five notes and match the melody using your birds' beautiful singing voices.  In order to move onto the next level, players must match the order of musical notes in the distant birds melody using their ears.  
+_Song Birds_ is an educational music game that helps you improve your ear for melodies.  The player is able to control six birds, each one assigned a single musical note that sounds when you select a bird bottom of the screen. The object of the game is to listen to a playback of a three to six note melody and match the melody using your birds' beautiful singing voices and your own ears. 
 
 ## Technical Plan
   - Use DOM api for functionality 
@@ -28,6 +28,8 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - Display correct combo or win conditions and note choices in real time.
   - Successfully have an audio component when you click a key or button
   - Successfully track and execute win conditions function
+  - Successfully add notes to musical staff in order produced
+  - Record and utilize audio components
 
 ## Stretch Goals
   - Create more than one level
