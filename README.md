@@ -1,6 +1,6 @@
 # SEI Project 1 - Birds on a Wire
 
- **Birds on a Wire** is an educational music game that helps you improve your ear for melodies.  The object of the game is to listen to a distant bird call and match the melody using your birds' beautiful singing voices.  Each one of your birds is assigned a musical note.  In order to move onto the next level, players must communicate with the distant bird by matching it's call.  
+_Birds on a Wire_ is an educational music game that helps you improve your ear for melodies.  The player is able to control six birds on a wire and each one  is assigned a single musical note. The object of the game is to listen to a distant birds' melody of three to five notes and match the melody using your birds' beautiful singing voices.  In order to move onto the next level, players must match the order of musical notes in the distant birds melody using their ears.  
 
 ## Technical Plan
   - Use DOM api for functionality 
