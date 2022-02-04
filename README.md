@@ -18,7 +18,8 @@ _Birds on a Wire_ is an educational music game that helps you improve your ear f
   
 # Wireframes
   
-![birds on a wire frame_1](https://user-images.githubusercontent.com/97310057/152467488-60f9e940-12f7-41ab-b7da-c1d008ba65b6.jpg)
+![bird wireframe ](https://user-images.githubusercontent.com/97310057/152470395-927afd9f-bd4e-4f64-8229-9451e5acfa62.jpg)
+
 
 ## MPV Goals
   - Get all button functionality working
