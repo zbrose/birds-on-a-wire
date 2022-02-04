@@ -1,6 +1,6 @@
-# SEI Project 1 - Birds on a Wire
+# SEI Project 1 - Song Birds
 
-_Birds on a Wire_ is an educational music game that helps you improve your ear for melodies.  The player is able to control six birds on a wire and each one  is assigned a single musical note. The object of the game is to listen to a distant birds' melody of three to five notes and match the melody using your birds' beautiful singing voices.  In order to move onto the next level, players must match the order of musical notes in the distant birds melody using their ears.  
+_Song Birds_ is an educational music game that helps you improve your ear for melodies.  The player is able to control six birds on a wire and each one  is assigned a single musical note. The object of the game is to listen to a distant birds' melody of three to five notes and match the melody using your birds' beautiful singing voices.  In order to move onto the next level, players must match the order of musical notes in the distant birds melody using their ears.  
 
 ## Technical Plan
   - Use DOM api for functionality 
@@ -9,6 +9,7 @@ _Birds on a Wire_ is an educational music game that helps you improve your ear f
   - Create an instructions page at the game start
   - Hook up audio playback at an event
   - Use one row of keyboard keys to let user make musical note selections - QWERTY or the like
+  - Create a musical notation display that tracks which note is played and in what order and placing the note on its corresponding note line or space
   - Keep track of conditions for winning: which notes have been hit and in what order measured with a winning combination based on the inital bird call
   - If combination of user notes doesnt match order - clear player choice and start over
   - Add audio into the functionality - a line of 3 notes for the intital bird call and single notes for user bird choice
