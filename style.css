@@ -1,0 +1,71 @@
+
+h1{
+    text-align: center;
+}
+
+.container {
+    margin: 100px;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-evenly;
+    height: 10vh;
+    
+   
+}
+
+.top-row > .display {
+    border: 1px solid black;
+}
+
+.top-row > button {
+    margin: 1rem;
+    width: 10vh;
+    height: 3vh;
+    
+}
+
+.middle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    
+}
+
+img {
+    width: 550x;
+    height: 275px;
+}
+
+.middle-row > #notation-display {
+    width: 60vw;
+    height: 25vh;
+    
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+}
+
+
+.bird {
+    border: 1px solid black;
+    height: 5vh;
+    width: 5vw;
+    margin-top: 3rem;
+    
+}
+
+
