@@ -26,28 +26,20 @@ button{
 
 }
 
-.display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20vw;
-    height: 5vh;
-}
-
 .top-row {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     height: 10vh;
-    
-   
-}
-
-.top-row > #level-display {
-    display: flex;
-    justify-content: center;
-    align-items: ;
     border: 1px solid black;
 }
+   
+
+
+/* #level-display {
+    background-color: green;
+} */
+
 
 .top-row > button {
     margin: 1rem;
@@ -55,6 +47,13 @@ button{
     height: 3vh;
     
 }
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 
 .middle-row {
     display: flex;
@@ -64,26 +63,19 @@ button{
     
 }
 
-#notation-display > img {
+#notation-display > img { 
     width: 800px;
     height: 400px;
 }
 
-.middle-row > #notation-display {
-    width: 60vw;
-    height: 25vh;
-    
-}
 
 .bottom-row {
     display: flex;
     justify-content: space-evenly;
-    /* border: 1px solid black; */
 }
 
 
 .bird {
-    text-align: center;
     height: 5vh;
     width: 5vw;
     margin-top: 3rem;
@@ -91,6 +83,19 @@ button{
     
 }
 
+.controls{
+    display: flex;
+    align-items: flex-end;
+    background-color: grey;
+
+}
+
+.note-d {
+    position: absolute;
+    top: 493px;
+    height: 125px;
+    width: 125px;
+}
 
 
 
