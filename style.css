@@ -3,6 +3,11 @@ h1{
     text-align: center;
 }
 
+button{
+    width: 10vw;
+    height: 3vh;
+}
+
 .instructions {
     text-align: center;
     margin: 2rem;
@@ -37,9 +42,12 @@ h1{
    
 }
 
-/* .top-row > .display {
+.top-row > #level-display {
+    display: flex;
+    justify-content: center;
+    align-items: ;
     border: 1px solid black;
-} */
+}
 
 .top-row > button {
     margin: 1rem;
