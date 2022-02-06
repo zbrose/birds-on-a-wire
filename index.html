@@ -9,16 +9,15 @@
 
 </head>
 <body>
-
-    <h1> Song-Birds</h1>
+    
     
     <!-- <img class="clouds" src="clouds background.jpeg" alt="clouds"> -->
     
-    <div class="instructions">
-        <h2>Welcome to Songbirds!</h2>
-        <p> Push the 'play/repeat melody' button and listen carefully to the melody.  Then, use your birds to match the melody's pitches!</p>
-    </div>
-    <div class="'container">
+    <h1> Song-Birds</h1>
+    <p id='instructions'> Push the 'play/repeat melody' button and listen carefully to the melody. Then, use your birds to match the melody's pitches!</p>
+    
+    
+    <div class="container">
        
        
         <div class="top-row">
@@ -34,14 +33,13 @@
         </figure> 
 
         <figure>
-            <figcaption>Play relative pitch:</figcaption>
+            <figcaption>Play relative "C" Note:</figcaption>
             <audio class="relative-pitch" controls> Press to play melody
                 <source src="Rhode_keyCMaj_74bpm.wav">
             </audio>
          </figure>
-        <div id="controls-display" class="display">
             <button id="reset-button">Reset</button>
-        </div>
+        
          </div>
 
        
@@ -50,42 +48,41 @@
          <div class = "middle-row">
              <div id="notation-display" class="display">
                 <img src="musicstaff.png"  alt="Music Staff"/>
-             </div>
-             <div class="note-input">
-
-             </div>
-         </div>
-
-      
-       
-       
-         <div class="bottom-row">
-             <div class="bird">
-                 <h3>C</h3>
-                 <img id="bird1" src="WesternTanager.png" alt="Western Tanager" width=150px height=150px>
-                 <audio id="audio-c"> <source> </source> </audio>
-             </div>
-             <div class="bird">
-                 <h3>D</h3>
+                <div class="note-input"></div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="bottom-row">
+            <div class="bird">
+                <h3>C</h3>
+                <img id="bird1" src="WesternTanager.png" alt="Western Tanager" width=150px height=150px>
+                <audio id="audio-c"> <source> </source> </audio>
+            </div>
+            <div class="bird">
+                <h3>D</h3>
                 <img id="bird2" src="ScrubJay.png" alt="Scrub Jay" width=150px height=150px>
-             </div>
-             <div class="bird">
-                 <h3>E</h3>
+            </div>
+            <div class="bird">
+                <h3>E</h3>
                 <img id="bird3" src="SpottedTowhee.png" alt="Spotted Towhee" width=150px height=150px>
-             </div>
-             <div class="bird">
-                 <h3>G</h3>
+            </div>
+            <div class="bird">
+                <h3>G</h3>
                 <img id="bird4" src="HoodedOriole.png" alt="Hooded Oriole" width=150px height=150px>
-             </div>
-             <div class="bird">
-                 <h3>A</h3>
-                <img id="bird5" src="YellowRumpedWarbler.png" alt="Warbler" width=150px height=150px>
-             </div>
-             <div class="bird">
-                 <h3>High C</h3>
-                <img id="bird6" src="allens Hummingbird.png" alt="Hummingbird" width=150px height=150px>
-             </div>
-         </div>
+            </div>
+            <div class="bird">
+                <h3>A</h3>
+                <img id="bird5" src="allens Hummingbird.png" alt="Hummingbird" width=150px height=150px>
+            </div>
+            <!-- <div class="bird">
+                <h3>High C</h3>
+                <img id="bird6" src="YellowRumpedWarbler.png" alt="Warbler" width=150px height=150px>
+                
+            </div> -->
+        </div>
         
 
          
