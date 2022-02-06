@@ -1,6 +1,11 @@
+body {
+    background-color: rgb(255, 239, 219);
+}
+
 
 h1{
     text-align: center;
+    font-size: 50px;
 }
 
 
@@ -36,6 +41,7 @@ h1{
 }
 
 button{
+    border-radius: 5px;
     align-self: center;
     width: 10vw;
     height: 3vh;
@@ -121,7 +127,13 @@ figcaption {
 .bird {
     font-size: 30px;
     text-align: center;
-    background-color: rgba(255, 0, 0, 0.411);
+    filter: grayscale(100%);
+    color: white;
+    /* background-color: rgba(255, 0, 0, 0.411); */
 }    
 
+.bird:hover{
+    filter: grayscale(0%);
+    transition: all 250ms ease;
+}
 
