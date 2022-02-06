@@ -25,7 +25,7 @@
                 <h2 id="level-display" class="display">Level: 1</h3>
                  <p id="try-count">Try Count: 0</p>
                 </div>
-        <figure>
+        <!-- <figure>
             <figcaption>Play/repeat melody:</figcaption> 
             <audio class="melody" controls> 
                 <source src="audio/Problem_melody.wav">
@@ -37,7 +37,9 @@
             <audio class="relative-pitch" controls> Press to play melody
                 <source src="audio/C_note.wav">
             </audio>
-         </figure>
+         </figure> -->
+            <button id="play-melody">Play/Repeat Melody</button>
+            <button id="play-relative">Play Relative Pitch</button>
             <button id="reset-button">Reset</button>
         
          </div>
@@ -88,6 +90,8 @@
         <audio id="e-note" src="audio/E_note.wav"></audio>
         <audio id="g-note" src="audio/G_note.wav"></audio>
         <audio id="a-note" src="audio/A_note.wav"></audio>
+        <audio id="melody" src="audio/Problem_melody.wav"></audio>
+        <audio id="relative-pitch" src="audio/C_note.wav"></audio>
 
      </div>
 

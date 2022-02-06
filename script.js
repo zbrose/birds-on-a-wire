@@ -3,30 +3,30 @@
 // record sounds and upload them into here
 // create a Bird object instance and run it for each click?
 
+const playerBirds = [      // map over each instance of bird
+        {
+
+        }
+]
+
+
+
 let solutionMelody = ['c','e','d','g']   // randomly generate array numbers or strings for muktiple levels
 let playerChoiceMelody = []
 let tryCount = 0
 const noteInput =  document.querySelector('.note-input')
 const resetButton = document.getElementById('reset-button')
-const matchDisplay = document.getElementById('instructions')
+const matchDisplay = document.getElementById('instructions') 
 const cNoteAudio = document.getElementById('c-note') 
 const dNoteAudio = document.getElementById('d-note') 
 const eNoteAudio = document.getElementById('e-note') 
 const gNoteAudio = document.getElementById('g-note') 
 const aNoteAudio = document.getElementById('a-note') 
-  
 
-// const cNote = document.createElement('img')
-// cNote.src = 'ledgerlineqnote.png'
-// const dNote = document.createElement('img')
-// dNote.src = 'quarternote.png'
-// const eNote = document.createElement('img')
-// eNote.src = 'quarternote.png'
-// const gNote = document.createElement('img')
-// gNote.src = 'quarternote.png'
-// const aNote = document.createElement('img')
-// aNote.src = 'quarternote.png'
-
+const playMelody = document.getElementById('play-melody').addEventListener('click',()=>{
+        document.getElementById('melody').play()})
+const playRelativePitch = document.getElementById('play-relative').addEventListener('click',()=>{
+        document.getElementById('relative-pitch').play()})
 
 function lookForMatches (arr1, arr2) {                                        
         return Array.isArray(arr1) && Array.isArray(arr2) && 
@@ -36,6 +36,9 @@ function lookForMatches (arr1, arr2) {
 
 const gameReset = () =>{
         if (resetButton.innerText === 'Reset'){
+         document.querySelectorAll('.bird').forEach(playerNoteChoice => {
+        playerNoteChoice.addEventListener('click', clickEvent)
+        })
         tryCount++
         document.getElementById('try-count').innerText = 'Try Count: ' + tryCount
         playerChoiceMelody = []
@@ -54,10 +57,13 @@ const gameReset = () =>{
 
 resetButton.addEventListener('click',gameReset)
 
-const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteChoice => 
-    {playerNoteChoice.addEventListener('click',(event)=>{
+const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteChoice => {
+        playerNoteChoice.addEventListener('click', clickEvent)
+})
 
+function clickEvent (event) {
         const playerBirdChoice = event.target.id
+        // if (matchDisplay.innerText === 'NICE WORK!' || matchDisplay.innerText === 'Shucks!  Not a match.  Try again?') {}              //possible way to stop game
 
         if (playerBirdChoice === 'bird1'){
                 document.getElementById('bird1') 
@@ -100,20 +106,57 @@ const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteC
                 noteInput.appendChild(displayANote)
                 aNoteAudio.play()
         } 
+
+
         if (lookForMatches(playerChoiceMelody, solutionMelody)===true){
-                matchDisplay.innerText = 'WOOP! YOUR EARS ARE LOOKING BIGGER ALREADY!'
+                matchDisplay.innerText = 'NICE WORK!'
                 resetButton.innerText = "Next Level"
-                //stop player from inputting notes
-                removeEventListener('click', playerNoteChoices)
+                //add new function with audio play listener
+                document.querySelectorAll('.bird').forEach(playerNoteChoice => {
+                        playerNoteChoice.removeEventListener('click', clickEvent)
+                })
+                document.querySelectorAll('.bird').forEach(playerNoteChoice => {
+                        playerNoteChoice.addEventListener('click', postGameClick)
+                })
+                
                 console.log('WE HAVE A WINNER')
         
         } else if (playerChoiceMelody.length === solutionMelody.length && lookForMatches(playerChoiceMelody, solutionMelody)===false) {
                 matchDisplay.innerText = 'Shucks!  Not a match.  Try again?'
+                document.querySelectorAll('.bird').forEach(playerNoteChoice => {
+                        playerNoteChoice.removeEventListener('click', clickEvent)
+                })
+                document.querySelectorAll('.bird').forEach(playerNoteChoice => {
+                        playerNoteChoice.addEventListener('click', postGameClick)
+                })
+                
                 console.log('NO MATCH RESET GAME')
         }
         
         lookForMatches(playerChoiceMelody, solutionMelody)
-})})
+}           
+
+const postGameClick = (event) => {
+        const playerBirdChoice = event.target.id
+
+        if (playerBirdChoice === 'bird1'){
+                document.getElementById('bird1') 
+                cNoteAudio.play()
+        }  if (playerBirdChoice === 'bird2'){
+                document.getElementById('bird2') 
+                dNoteAudio.play()
+        } if (playerBirdChoice === 'bird3'){
+                document.getElementById('bird3') 
+                eNoteAudio.play()
+        } if (playerBirdChoice === 'bird4'){
+                document.getElementById('bird4') 
+                gNoteAudio.play()
+        } if (playerBirdChoice === 'bird5'){
+                document.getElementById('bird5') 
+                aNoteAudio.play()
+        } 
+}
+
 
 
 // const playerNoteSelection = (event) => {                               
