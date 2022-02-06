@@ -9,7 +9,12 @@ let tryCount = 0
 const noteInput =  document.querySelector('.note-input')
 const resetButton = document.getElementById('reset-button')
 const matchDisplay = document.getElementById('instructions')
-const  melody = document.querySelector('.melody')  
+const cNoteAudio = document.getElementById('c-note') 
+const dNoteAudio = document.getElementById('d-note') 
+const eNoteAudio = document.getElementById('e-note') 
+const gNoteAudio = document.getElementById('g-note') 
+const aNoteAudio = document.getElementById('a-note') 
+  
 
 // const cNote = document.createElement('img')
 // cNote.src = 'ledgerlineqnote.png'
@@ -57,39 +62,43 @@ const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteC
         if (playerBirdChoice === 'bird1'){
                 document.getElementById('bird1') 
                 playerChoiceMelody.push('c')
-                const cNote = document.createElement('img')
-                cNote.src = 'ledgerlineqnote.png'
-                cNote.classList.add('note-c','note')
-                noteInput.appendChild(cNote)
-                melody.play()
+                const displayCNote = document.createElement('img')
+                displayCNote.src = 'ledgerlineqnote.png'
+                displayCNote.classList.add('display-c','note')
+                noteInput.appendChild(displayCNote)
+                cNoteAudio.play()
         }  if (playerBirdChoice === 'bird2'){
                 document.getElementById('bird2') 
                 playerChoiceMelody.push('d')
-                const dNote = document.createElement('img')
-                dNote.src = 'quarternote.png'
-                dNote.classList.add('note-d','note')
-                noteInput.appendChild(dNote)
+                const displayDNote = document.createElement('img')
+                displayDNote.src = 'quarternote.png'
+                displayDNote.classList.add('display-d','note')
+                noteInput.appendChild(displayDNote)
+                dNoteAudio.play()
         } if (playerBirdChoice === 'bird3'){
                 document.getElementById('bird3') 
                 playerChoiceMelody.push('e')
-                const eNote = document.createElement('img')
-                eNote.src = 'quarternote.png'
-                eNote.classList.add('note-e','note')
-                noteInput.appendChild(eNote)
+                const displayENote = document.createElement('img')
+                displayENote.src = 'quarternote.png'
+                displayENote.classList.add('display-e','note')
+                noteInput.appendChild(displayENote)
+                eNoteAudio.play()
         } if (playerBirdChoice === 'bird4'){
                 document.getElementById('bird4') 
                 playerChoiceMelody.push('g')
-                const gNote = document.createElement('img')
-                gNote.src = 'quarternote.png'
-                gNote.classList.add('note-g','note')
-                noteInput.appendChild(gNote)
+                const displayGNote = document.createElement('img')
+                displayGNote.src = 'quarternote.png'
+                displayGNote.classList.add('display-g','note')
+                noteInput.appendChild(displayGNote)
+                gNoteAudio.play()
         } if (playerBirdChoice === 'bird5'){
                 document.getElementById('bird5') 
                 playerChoiceMelody.push('a')
-                const aNote = document.createElement('img')
-                aNote.src = 'quarternote.png'
-                aNote.classList.add('note-a','note')
-                noteInput.appendChild(aNote)
+                const displayANote = document.createElement('img')
+                displayANote.src = 'quarternote.png'
+                displayANote.classList.add('display-a','note')
+                noteInput.appendChild(displayANote)
+                aNoteAudio.play()
         } 
         if (lookForMatches(playerChoiceMelody, solutionMelody)===true){
                 matchDisplay.innerText = 'WOOP! YOUR EARS ARE LOOKING BIGGER ALREADY!'
