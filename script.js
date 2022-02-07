@@ -93,6 +93,13 @@ function clickEvent (event) {
         if (lookForMatches(playerChoiceMelody, solutionMelody)===true){
                 matchDisplay.innerText = 'NICE WORK! Move on to the next level.'
                 resetButton.innerText = "Next Level"
+                resetButton.style.height = '5rem'
+                resetButton.style.width = '15rem'
+                resetButton.style.backgroundColor = 'rgb(0, 186, 243)'
+                resetButton.style.color = 'white'
+                resetButton.style.fontSize = '30px'
+
+                
                 //add new function with audio play listener
                 document.querySelectorAll('.bird').forEach(playerNoteChoice => {
                         playerNoteChoice.removeEventListener('mousedown', clickEvent)

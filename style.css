@@ -31,21 +31,29 @@ h1{
     margin: 0 auto;
 }
 
+footer {
+    background-color: white;
+}
+
 .inst-box{
     display:flex;
     justify-content: center;
     align-items: center;
     /* background-color: rgba(105, 12, 114, 0.541); */
-    width: 60%;
-    height: 200px;
-    margin: 0 auto;
+    width: 70%;
+    height: 150px;
+    margin: 25px auto;
+    background-color: white;
+    border-radius: 50px;
+
 
 }
 
 #instructions {
     display: inline-block;
-    font-size: 40px;
+    font-size: 35px;
     margin: 0px;
+    
 }
 
 
@@ -56,12 +64,57 @@ h1{
     /* background-color: rgba(69, 96, 216, 0.411); */
 }
 
+.level-box{
+    background-color: white;
+    width: 220px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#level-display{
+    font-size: 50px;
+    margin: 0;
+}
+
+#try-count {
+    font-size: x-large;
+    margin: 10px;
+}
+
 button{
     border-radius: 5px;
     align-self: center;
     width: 10vw;
     height: 3vh;
+    color: black;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Caveat', cursive; ;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    transition: .5s;
     
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.562);
+    transition: 0.3s;
+}
+button:active{
+    background-color: rgb(0, 186, 243);
+    color:white;
+    transition: 0.1s;
+}
+
+#play-melody{
+    height: 5rem;
+    width: 15rem;
+    font-size: x-large;
+}
+#play-relative{
+    height: 5rem;
+    width: 15rem;
+    font-size: x-large;
 }
 
 
@@ -69,6 +122,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* align-items: flex-start; */
     height: 30vh;
     /* background-color: rgba(69, 216, 93, 0.411); */
 }
@@ -140,12 +194,26 @@ button{
 
 .bird {
     margin: 1em auto;
-    font-size: 30px;
-    text-align: center;
     filter: grayscale(100%);
-    color: white;
     transition: 0.2s;
-}    
+    
+}   
+
+.fluffy-cloud {
+    display: block;
+    margin: 0 auto;
+    filter: grayscale(100%)
+    
+}
+
+
+.note-name {
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    position: relative;
+    bottom: 60px;
+    margin: 0;
+}
 
 .bird:hover{
     filter: grayscale(0%);
