@@ -11,13 +11,19 @@
 <body>
     
     
-    <!-- <img class="clouds" src="clouds background.jpeg" alt="clouds"> -->
+    <img class="clouds" src="clouds background.jpeg" alt="clouds">
     
-    <h1> Song-Birds</h1>
-    <p id='instructions'> Push the 'play/repeat melody' button and listen carefully to the melody. Then, use your birds to match the melody's pitches!</p>
     
     
     <div class="container">
+
+
+        <header>
+            <h1> Song Birds </h1>
+            <div class="inst-box">
+                <p id="instructions"> Press the "play/repeat melody" button and listen carefully to the melody.  Then, click on your birds to match the melody's pitches!</p>  
+            </div> 
+        </header>
        
        
         <div class="top-row">
@@ -39,7 +45,7 @@
             </audio>
          </figure> -->
             <button id="play-melody">Play/Repeat Melody</button>
-            <button id="play-relative">Play Relative Pitch</button>
+            <button id="play-relative">Play C Note</button>
             <button id="reset-button">Reset</button>
         
          </div>
@@ -50,33 +56,35 @@
          <div class = "middle-row">
              <div id="notation-display" class="display">
                 <img src="musicstaff.png"  alt="Music Staff"/>
-                <div class="note-input"></div>
-            </div>
+                <div class="note-input">
+                    
+                </div>
+             </div>
         </div>
         
         
         
         
         <div class="bottom-row">
-            <div class="bird">
-                <h3>C</h3>
-                <img id="bird1" src="WesternTanager.png" alt="Western Tanager" width=150px height=150px>
+            <div>
+                <img class="bird" id="bird1" src="WesternTanager.png" alt="Western Tanager" width=150px height=150px>
+                <!-- <h3>C</h3> -->
             </div>
-            <div class="bird">
-                <h3>D</h3>
-                <img id="bird2" src="ScrubJay.png" alt="Scrub Jay" width=150px height=150px>
+            <div>
+                <img class="bird" id="bird2" src="ScrubJay.png" alt="Scrub Jay" width=150px height=150px>
+                <!-- <h3>D</h3> -->
             </div>
-            <div class="bird">
-                <h3>E</h3>
-                <img id="bird3" src="SpottedTowhee.png" alt="Spotted Towhee" width=150px height=150px>
+            <div>
+                <img class="bird" id="bird3" src="SpottedTowhee.png" alt="Spotted Towhee" width=150px height=150px>
+                <!-- <h3>E</h3> -->
             </div>
-            <div class="bird">
-                <h3>G</h3>
-                <img id="bird4" src="HoodedOriole.png" alt="Hooded Oriole" width=150px height=150px>
+            <div>
+                <img class="bird" id="bird4" src="HoodedOriole.png" alt="Hooded Oriole" width=150px height=150px>
+                <!-- <h3>G</h3> -->
             </div>
-            <div class="bird">
-                <h3>A</h3>
-                <img id="bird5" src="allens Hummingbird.png" alt="Hummingbird" width=150px height=150px>
+            <div>
+                <img class="bird" id="bird5" src="allens Hummingbird.png" alt="Hummingbird" width=150px height=150px>
+                <!-- <h3>A</h3> -->
             </div>
             <!-- <div class="bird">
                 <h3>High C</h3>
@@ -84,6 +92,16 @@
                 
             </div> -->
         </div>
+
+        <!-- <footer>
+            <h3>Note Names: </h3>
+            <h3>C</h3>
+            <h3>D</h3>
+            <h3>E</h3>
+            <h3>G</h3>
+            <h3>A</h3>
+
+        </footer> -->
         
         <audio id="c-note" src="audio/C_note.wav"></audio>
         <audio id="d-note" src="audio/D_note.wav"></audio>
