@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song-Birds: An Ear Training Game</title>
     <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
 </head>
 <body>
@@ -21,7 +25,7 @@
 
         <header>
             <div>
-            <h1> Song Birds </h1>
+            <h1 class="animate__animated animate__backInLeft"> Song Birds </h1>
             <div class="inst-box">
                 <p id="instructions"> Press the "play/repeat melody" button and listen carefully to the melody.  Then, click on your birds to match the melody's pitches!</p>  
             </div> 
@@ -60,6 +64,7 @@
              <div id="notation-display" class="display">
                 <img src="Images/musicstaff.png"  alt="Music Staff"/>
                 <div class="note-input">
+                    <!-- appending img children -->
 
                 </div>
              </div>
@@ -111,6 +116,8 @@
     <audio id="a-note" src="audio/A_note.wav"></audio>
     <audio id="melody" src="audio/Problem_melody.wav"></audio>
     <audio id="relative-pitch" src="audio/C_note.wav"></audio>
+    <audio id="wrong-sound" src="audio/wrong_sound.wav"></audio>
+    <audio id="correct-sound" src="Audio/correct_sound.wav"></audio>
 
     
 </body>

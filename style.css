@@ -126,6 +126,7 @@ button:active{
     width: 15rem;
     font-size: x-large;
 }
+
 #play-relative{
     height: 5rem;
     width: 15rem;
@@ -157,12 +158,9 @@ button:active{
     height: 17em;
     width: 25em;
     /* background-color: rgba(255, 255, 255, 0.411); */
-
 }
 
-
-
-.display-c{
+.display-c {
     position: relative;
     top: 125px;
     height: 11em;
@@ -195,8 +193,6 @@ button:active{
     padding: 0px 30px;
 }
 
-
-
 .bottom-row {
     display: flex;
     justify-content: space-evenly;
@@ -207,7 +203,7 @@ button:active{
 .bird {
     margin: 2em auto;
     filter: grayscale(100%);
-    transition: 0.2s;   
+    transition: 0.3s;   
 }   
 
 
