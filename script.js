@@ -1,14 +1,7 @@
-// get birds animate in some way on selection 
-// get birds to change color over click press and release or mouse over, make interactive
-// record sounds and upload them into here
-// create a Bird object instance and run it for each click?
-// change click event to mousedown and make true or false
 
-
-
-
-
-
+// create a Bird object instance and run it for each click
+// play pitch on each click regardless of duration
+// refactor code 
 
 
 let solutionMelody = ['c','e','d','g']   // randomly generate array numbers or strings for muktiple levels
@@ -221,3 +214,5 @@ resetButton.addEventListener('click',gameReset)
 
 // document.addEventListener('keydown', playerNoteSelection)
 // // document.addEventListener('keyup', playerNoteSelection)
+
+   
