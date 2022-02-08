@@ -1,10 +1,11 @@
 
-// create a Bird object instance and run it for each click
-// play pitch on each click regardless of duration
+// create a Bird object instance and run it for each click?
 // refactor code 
+// randomly generate array numbers or strings for multiple levels on next level button - sound files attached to array values
+// add keyboard fun to bottom section
 
 
-let solutionMelody = ['c','e','d','g']   // randomly generate array numbers or strings for muktiple levels
+let solutionMelody = ['c','e','d','g'] 
 let playerChoiceMelody = []
 let tryCount = 0
 const noteInput =  document.querySelector('.note-input')
@@ -20,23 +21,32 @@ const playMelody = document.getElementById('play-melody').addEventListener('mous
         document.getElementById('melody').play()})
 const playRelativePitch = document.getElementById('play-relative').addEventListener('mousedown',()=>{
                 document.getElementById('relative-pitch').play()})
-                
-                
-//   const playerBirds = [      // map over each instance of bird
-//                         {
-                
-//                         }
-//                 ]
-                
-
 const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteChoice => {
         playerNoteChoice.addEventListener('mousedown', clickEvent)
-})
+ })
 
+ const birdObject = [
+         {}
+ ]
+                
+// class Bird  {
+//         constructor (id, number, note ){
+//                 this.id = id
+//                 this.number = number
+//                 this.note = note
+//         }
+//         clickEvent(){
+                
+//                 console.log('clicked!')
+//         }
+// }
+
+// const birdOne = new Bird ('bird',1,'c')
+// birdOne.clickEvent()
+
+// CLICK EVENT FUNCTION AND CONDITIONS
 function clickEvent (event) {
         const playerBirdChoice = event.target.id
-        console.log(event)
-        // if (matchDisplay.innerText === 'NICE WORK!' || matchDisplay.innerText === 'Shucks!  Not a match.  Try again?') {}              //possible way to stop game
 
         if (playerBirdChoice === 'bird1'){
                 playerChoiceMelody.push('c')
@@ -47,7 +57,6 @@ function clickEvent (event) {
                 cNoteAudio.currentTime=0
                 cNoteAudio.play()
         }  if (playerBirdChoice === 'bird2'){
-                // document.getElementById('bird2') 
                 playerChoiceMelody.push('d')
                 const displayDNote = document.createElement('img')
                 displayDNote.src = 'quarternote.png'
@@ -55,15 +64,13 @@ function clickEvent (event) {
                 noteInput.appendChild(displayDNote)
                 dNoteAudio.play()
         } if (playerBirdChoice === 'bird3'){
-                // document.getElementById('bird3') 
                 playerChoiceMelody.push('e')
                 const displayENote = document.createElement('img')
                 displayENote.src = 'quarternote.png'
                 displayENote.classList.add('display-e','note')
                 noteInput.appendChild(displayENote)
                 eNoteAudio.play()
-        } if (playerBirdChoice === 'bird4'){
-                // document.getElementById('bird4') 
+        } if (playerBirdChoice === 'bird4'){ 
                 playerChoiceMelody.push('g')
                 const displayGNote = document.createElement('img')
                 displayGNote.src = 'quarternote.png'
@@ -71,7 +78,6 @@ function clickEvent (event) {
                 noteInput.appendChild(displayGNote)
                 gNoteAudio.play()
         } if (playerBirdChoice === 'bird5'){
-                // document.getElementById('bird5') 
                 playerChoiceMelody.push('a')
                 const displayANote = document.createElement('img')
                 displayANote.src = 'quarternote.png'
@@ -80,7 +86,7 @@ function clickEvent (event) {
                 aNoteAudio.play()
         } 
 
-
+        // LOOKING FOR MATCHES CONDITIONAL
         if (lookForMatches(playerChoiceMelody, solutionMelody)===true){
                 matchDisplay.innerText = 'NICE WORK! Move on to the next level.'
                 resetButton.innerText = "Next Level"
@@ -90,8 +96,6 @@ function clickEvent (event) {
                 resetButton.style.color = 'white'
                 resetButton.style.fontSize = '30px'
 
-                
-                //add new function with audio play listener
                 document.querySelectorAll('.bird').forEach(playerNoteChoice => {
                         playerNoteChoice.removeEventListener('mousedown', clickEvent)
                 })
@@ -113,12 +117,14 @@ function clickEvent (event) {
         lookForMatches(playerChoiceMelody, solutionMelody)
 }           
 
+//FINING MATCHES BETWEEN TWO ARRAYS
 function lookForMatches (arr1, arr2) {                                        
         return Array.isArray(arr1) && Array.isArray(arr2) && 
         arr1.length === arr2.length && 
         arr1.every((val, index)=> val === arr2[index])
 }
 
+//POST GAME FUNCTIONALITY 
 const postGameClick = (event) => {
         const playerBirdChoice = event.target.id
 
@@ -140,6 +146,7 @@ const postGameClick = (event) => {
         } 
 }
 
+//GAME RESET FUNCTION
 const gameReset = () =>{
         if (resetButton.innerText === 'Reset'){
          document.querySelectorAll('.bird').forEach(playerNoteChoice => {
@@ -159,39 +166,38 @@ const gameReset = () =>{
         } else console.log('next level')
         
 }
-
-
 resetButton.addEventListener('click',gameReset)
 
+// EXTRA FUN!
+document.addEventListener('keydown', e => pressedKeys[e.key] = true)
+document.addEventListener('keyup', e => pressedKeys[e.key] = false)
+const pressedKeys = {}
 
-const keyboardInputs = (event) => {                               
-        const pressedKey = event
+
+const keyboardInputs = () => {                       
         
-        if(pressedKey.key === "q") { 
-                document.querySelector('#bird1').style.transform = "rotate(360deg)"
-                cNoteAudio.currentTime=0
-                cNoteAudio.play()
-                
-        if(pressedKey.key === "w"){
+        if(pressedKeys.q) { 
+               cNoteAudio.currentTime=0
+               cNoteAudio.play()
+        }
+         if(pressedKeys.w){
                 dNoteAudio.currentTime=0
                 dNoteAudio.play()
         } 
-        if(pressedKey.key === "e"){
+        if(pressedKeys.e){
                 eNoteAudio.currentTime=0
                 eNoteAudio.play()
         }
-        if(pressedKey.key === "r"){
+        if(pressedKeys.r){
                 gNoteAudio.currentTime=0 
                 gNoteAudio.play()
         }
-        if(pressedKey.key === "t"){
+        if(pressedKeys.t){
                 aNoteAudio.currentTime=0
                 aNoteAudio.play()
         } 
-      
-}    
-}
-    
-        
-document.addEventListener('keydown', keyboardInputs)
+}   
+
+keyboardInputs()
+// document.addEventListener('keydown', keyboardInputs)
 // // document.addEventListener('keyup', playerNoteSelection)
