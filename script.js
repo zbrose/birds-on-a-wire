@@ -35,21 +35,19 @@ const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteC
 
 function clickEvent (event) {
         const playerBirdChoice = event.target.id
-        const mouseDown = event.type
         console.log(event)
         // if (matchDisplay.innerText === 'NICE WORK!' || matchDisplay.innerText === 'Shucks!  Not a match.  Try again?') {}              //possible way to stop game
 
         if (playerBirdChoice === 'bird1'){
-                document.getElementById('bird1') 
                 playerChoiceMelody.push('c')
                 const displayCNote = document.createElement('img')
                 displayCNote.src = 'ledgerlineqnote.png'
                 displayCNote.classList.add('display-c','note')
                 noteInput.appendChild(displayCNote)
-                displayCNote.style.transistion = "all 500ms ease"
+                cNoteAudio.currentTime=0
                 cNoteAudio.play()
         }  if (playerBirdChoice === 'bird2'){
-                document.getElementById('bird2') 
+                // document.getElementById('bird2') 
                 playerChoiceMelody.push('d')
                 const displayDNote = document.createElement('img')
                 displayDNote.src = 'quarternote.png'
@@ -57,7 +55,7 @@ function clickEvent (event) {
                 noteInput.appendChild(displayDNote)
                 dNoteAudio.play()
         } if (playerBirdChoice === 'bird3'){
-                document.getElementById('bird3') 
+                // document.getElementById('bird3') 
                 playerChoiceMelody.push('e')
                 const displayENote = document.createElement('img')
                 displayENote.src = 'quarternote.png'
@@ -65,7 +63,7 @@ function clickEvent (event) {
                 noteInput.appendChild(displayENote)
                 eNoteAudio.play()
         } if (playerBirdChoice === 'bird4'){
-                document.getElementById('bird4') 
+                // document.getElementById('bird4') 
                 playerChoiceMelody.push('g')
                 const displayGNote = document.createElement('img')
                 displayGNote.src = 'quarternote.png'
@@ -73,7 +71,7 @@ function clickEvent (event) {
                 noteInput.appendChild(displayGNote)
                 gNoteAudio.play()
         } if (playerBirdChoice === 'bird5'){
-                document.getElementById('bird5') 
+                // document.getElementById('bird5') 
                 playerChoiceMelody.push('a')
                 const displayANote = document.createElement('img')
                 displayANote.src = 'quarternote.png'
@@ -125,19 +123,19 @@ const postGameClick = (event) => {
         const playerBirdChoice = event.target.id
 
         if (playerBirdChoice === 'bird1'){
-                document.getElementById('bird1') 
+                cNoteAudio.currentTime=0
                 cNoteAudio.play()
         }  if (playerBirdChoice === 'bird2'){
-                document.getElementById('bird2') 
+                dNoteAudio.currentTime=0
                 dNoteAudio.play()
         } if (playerBirdChoice === 'bird3'){
-                document.getElementById('bird3') 
+                eNoteAudio.currentTime=0
                 eNoteAudio.play()
         } if (playerBirdChoice === 'bird4'){
-                document.getElementById('bird4') 
+                gNoteAudio.currentTime=0 
                 gNoteAudio.play()
         } if (playerBirdChoice === 'bird5'){
-                document.getElementById('bird5') 
+                aNoteAudio.currentTime=0
                 aNoteAudio.play()
         } 
 }
@@ -166,53 +164,34 @@ const gameReset = () =>{
 resetButton.addEventListener('click',gameReset)
 
 
-// const playerNoteSelection = (event) => {                               
-//         const pressedKey = event
+const keyboardInputs = (event) => {                               
+        const pressedKey = event
         
-//         if(pressedKey.key === "q") {   
-//                 document.getElementById('bird1').style.filter = "grayscale(100%)"  
-//                 playerChoiceMelody.push('c')
-//                 // const quarterNote = document.createElement('img')
-//                 // quarterNote.src = 'quarternote.png'
-//                 // quarterNote.classList.add('note-c')
-//                 // document.querySelector('.middle-row').appendChild(quarterNote)
-//         }
-//         if(pressedKey.key === "w"){
-//                 document.getElementById('bird2').style.filter = "grayscale(100%)"
-//                 playerChoiceMelody.push('d')
-//         } 
-//         if(pressedKey.key === "e"){
-//                 document.getElementById('bird3').style.filter = "grayscale(100%)"
-//                 playerChoiceMelody.push('e')
-//         } 
-//         if(pressedKey.key === "r"){
-//                 document.getElementById('bird4').style.filter = "grayscale(100%)"
-//                 playerChoiceMelody.push('g')
-//         } 
-//         if(pressedKey.key === "t"){
-//                 document.getElementById('bird5').style.filter = "grayscale(100%)"
-//                 playerChoiceMelody.push('a')
-//         } 
-//         if(pressedKey.key === "y"){
-//                 document.getElementById('bird6').style.filter = "grayscale(100%)"
-//                 playerChoiceMelody.push('high c')
-//         } 
-//         if (lookForMatches(playerChoiceMelody, solutionMelody)===true){
-//                 //stop gameplay and display winner
-//                 console.log('WE HAVE A WINNER')
-
-//         } else if (playerChoiceMelody.length === solutionMelody.length && lookForMatches(playerChoiceMelody, solutionMelody)===false) {
-//                // stop gameplay and ask player to reset
-//                 console.log('NO MATCH RESET GAME')
-//         }
-
+        if(pressedKey.key === "q") { 
+                document.querySelector('#bird1').style.transform = "rotate(360deg)"
+                cNoteAudio.currentTime=0
+                cNoteAudio.play()
+                
+        if(pressedKey.key === "w"){
+                dNoteAudio.currentTime=0
+                dNoteAudio.play()
+        } 
+        if(pressedKey.key === "e"){
+                eNoteAudio.currentTime=0
+                eNoteAudio.play()
+        }
+        if(pressedKey.key === "r"){
+                gNoteAudio.currentTime=0 
+                gNoteAudio.play()
+        }
+        if(pressedKey.key === "t"){
+                aNoteAudio.currentTime=0
+                aNoteAudio.play()
+        } 
+      
+}    
+}
+    
         
-//         console.log(playerChoiceMelody, solutionMelody)
-//         lookForMatches(playerChoiceMelody, solutionMelody)
-        
-// }        
-
-// document.addEventListener('keydown', playerNoteSelection)
+document.addEventListener('keydown', keyboardInputs)
 // // document.addEventListener('keyup', playerNoteSelection)
-
-   

@@ -10,7 +10,7 @@ body {
 .tree-branch-sign {
     position: absolute;
     width: 1000px;
-    top: 10%;
+    top: 15%;
     left: 53%;
     transform: translate(-50%, -50%);
     margin: 0 auto;
@@ -27,7 +27,7 @@ body {
     position: absolute;
     width: 100%;
     height:100%;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin:0;
@@ -77,7 +77,8 @@ h1 {
 }
 
 .level-box{
-    background-color: white;
+    background-color: rgba(0, 186, 243, 0.349);
+    color: rgb(0, 0, 0);
     width: 220px;
     padding: 10px;
     border-radius: 5px;
@@ -204,20 +205,11 @@ button:active{
 
 
 .bird {
-    margin: 1em auto;
+    margin: 2em auto;
     filter: grayscale(100%);
-    transition: 0.2s;
-    
-    
+    transition: 0.2s;   
 }   
 
-.note-name {
-    color: rgb(0, 0, 0);
-    font-size: xx-large;
-    position: relative;
-    bottom: 40px;
-    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
-}
 
 .bird:hover{
     filter: grayscale(0%);
@@ -230,6 +222,13 @@ button:active{
     animation-iteration-count: infinite;
 }
 
+.note-name {
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    position: relative;
+    bottom: 40px;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+}
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
