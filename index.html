@@ -6,20 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song-Birds: An Ear Training Game</title>
     <link rel="stylesheet" href="style.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
+    <audio autoplay>
+        <source id='background-music' src="Audio/game_start_strum.wav">
+    </audio>
     
     
     <img class="clouds" src="Images/clouds background.jpeg" alt="clouds">
-    
-    
-    
     <img class="tree-branch-sign" src="Images/Tree-branch-with-wooden-sign-on-transparent-background-PNG.png" alt="Tree Branch Sign">
+    
     <div class="container">
         
 
@@ -27,39 +24,22 @@
             <div>
             <h1 class="animate__animated animate__backInLeft"> Song Birds </h1>
             <div class="inst-box">
-                <p id="instructions"> Press the "play/repeat melody" button and listen carefully to the melody.  Then, click on your birds to match the melody's pitches!</p>  
+                <p id="instructions"> Press the 'play/repeat melody' button and listen carefully to the melody.  Then, click on your birds to match the melody's pitches!</p>  
             </div> 
             </div>
         </header>
-       
        
         <div class="top-row">
             <div class="level-box">
                 <h2 id="level-display" class="display">Level: 1</h3>
                  <p id="try-count">Try Count: 0</p>
             </div>
-        <!-- <figure>
-            <figcaption>Play/repeat melody:</figcaption> 
-            <audio class="melody" controls> 
-                <source src="audio/Problem_melody.wav">
-            </audio>
-        </figure> 
-
-        <figure>
-            <figcaption>Play relative "C" Note:</figcaption>
-            <audio class="relative-pitch" controls> Press to play melody
-                <source src="audio/C_note.wav">
-            </audio>
-         </figure> -->
             <button id="play-melody">Play/Repeat Melody</button>
             <button id="play-relative">Play C Note</button>
             <button id="reset-button">Reset</button>
         
          </div>
 
-       
-       
-       
          <div class = "middle-row">
              <div id="notation-display" class="display">
                 <img src="Images/musicstaff.png"  alt="Music Staff"/>
@@ -70,40 +50,27 @@
              </div>
         </div>
         
-        
-        
-        
         <div class="bottom-row">
             <div>
                 <img class="bird" id="bird1" src="Images/WesternTanager.png" alt="Western Tanager" width=150px height=150px>
-               
-                <h3 class ='note-name'>C</h3>
+               <h3 class ='note-name'>C</h3>
             </div>
             <div>
                 <img class="bird" id="bird2" src="Images/ScrubJay.png" alt="Scrub Jay" width=150px height=150px>
-               
                 <h3 class ='note-name'>D</h3>
             </div>
             <div>
                 <img class="bird" id="bird3" src="Images/SpottedTowhee.png" alt="Spotted Towhee" width=150px height=150px>
-               
                 <h3 class ='note-name'> E</h3>
             </div>
             <div>
                 <img class="bird" id="bird4" src="Images/HoodedOriole.png" alt="Hooded Oriole" width=150px height=150px>
-                
                 <h3 class ='note-name'>G</h3>
             </div>
             <div>
                 <img class="bird" id="bird5" src="Images/allens Hummingbird.png" alt="Hummingbird" width=150px height=150px>
-                
                 <h3 class ='note-name'>A</h3>
             </div>
-            <!-- <div class="bird">
-                <h3>High C</h3>
-                <img id="bird6" src="YellowRumpedWarbler.png" alt="Warbler" width=150px height=150px>
-                
-            </div> -->
         </div>
 
         
@@ -118,9 +85,12 @@
     <audio id="relative-pitch" src="audio/C_note.wav"></audio>
     <audio id="wrong-sound" src="audio/wrong_sound.wav"></audio>
     <audio id="correct-sound" src="Audio/correct_sound.wav"></audio>
+    <audio id="level-two-audio" src="Audio/problem_melody_2.wav"></audio>
 
-    
+ 
+
 </body>
 <script src="script.js"></script>
 </html>
 
+  

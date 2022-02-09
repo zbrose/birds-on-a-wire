@@ -1,36 +1,39 @@
 
 // refactor code 
 // randomly generate array numbers or strings for multiple levels on next level button - sound files attached to array values
-// animations for end keyboard section up and down presses
-// make another level
+// keyboard section up and down presses refactor
 
 
-// VARIABLES AND LISTENERS
+// VARIABLES AND LISTENERS ---------------------------------------------------->
 let easyMelody = ['c','e','d','g']
-// const mediumMelody = ['c','d','e','g']
-// const hardMelody = ['g','a','d','c']
 let playerChoiceMelody = []
 let tryCount = 0
 let levelCount = 1
 const birds = document.querySelectorAll('.bird')
 const noteInput =  document.querySelector('.note-input')
 const resetButton = document.getElementById('reset-button')
-const matchDisplay = document.getElementById('instructions')
+let matchDisplay = document.getElementById('instructions')
+const originalIntructions = "Press the 'play/repeat melody' button and listen carefully to the melody.  Then, click on your birds to match the melody's pitches!"
 const cNoteAudio = document.getElementById('c-note') 
 const dNoteAudio = document.getElementById('d-note') 
 const eNoteAudio = document.getElementById('e-note') 
 const gNoteAudio = document.getElementById('g-note') 
 const aNoteAudio = document.getElementById('a-note') 
 
-const playMelody = document.getElementById('play-melody').addEventListener('mousedown',()=>{
-        document.getElementById('melody').play()})
+
+function playLevelOneMelody () {
+       document.getElementById('melody').play()
+}
+document.getElementById('play-melody').addEventListener('mousedown',playLevelOneMelody)
+
 const playRelativePitch = document.getElementById('play-relative').addEventListener('mousedown',()=>{
                 document.getElementById('relative-pitch').play()})
+
 const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteChoice => {
         playerNoteChoice.addEventListener('mousedown', clickEvent)
  })
 
-// CLICK EVENT FUNCTION AND CONDITIONS    // store values in object OR switch case if statements
+// CLICK EVENT FUNCTION AND CONDITIONS ---------------------------------------------------->
 function clickEvent (event) {
         const playerBirdChoice = event.target.id
         switch (playerBirdChoice){
@@ -81,7 +84,7 @@ function clickEvent (event) {
 
         }
                 
-        // LOOKING FOR MATCHES CONDITIONAL
+        // LOOKING FOR MATCHES CONDITIONAL---------------------------------------------------->
         if (lookForMatches(playerChoiceMelody, easyMelody)===true){
 
                 
@@ -120,7 +123,7 @@ function clickEvent (event) {
 }           
 
 
-//FINDING MATCHES BETWEEN TWO ARRAYS
+//FINDING MATCHES BETWEEN TWO ARRAYS ---------------------------------------------------->
 function lookForMatches (arr1, arr2) {                                        
         return Array.isArray(arr1) && Array.isArray(arr2) && 
         arr1.length === arr2.length && 
@@ -128,12 +131,12 @@ function lookForMatches (arr1, arr2) {
 }
 
 
-//GAME RESET FUNCTION
+//GAME RESET FUNCTION ---------------------------------------------------->
 const gameReset = () =>{
         while (noteInput.firstChild) noteInput.removeChild(noteInput.firstChild)
         birds.forEach(playerNoteChoice => playerNoteChoice.addEventListener('mousedown', clickEvent))
 
-        //GAME RESET BLOCK
+        //GAME RESET BLOCK 
          if (resetButton.innerText === 'Reset'){
                 tryCount++
                 document.getElementById('try-count').innerText = 'Try Count: ' + tryCount
@@ -148,15 +151,21 @@ const gameReset = () =>{
                 document.getElementById('level-display').innerText = 'Level: ' + levelCount
                 playerChoiceMelody = []
                 easyMelody = ['c','d','e','g']
-                //NEW MELODY TO BE RECORDED AND APPENDED TO PLAY BUTTON
-                birds.forEach(bird => bird.classList.add('.bird'))
-                
+                matchDisplay.innerText = originalIntructions
+                document.getElementById('play-melody').removeEventListener('mousedown',playLevelOneMelody)
+                document.getElementById('play-melody').addEventListener('mousedown',()=>{
+                        document.getElementById('level-two-audio').play()})
+                birds.forEach(bird => {
+                        bird.classList.add('.bird')
+                        bird.style.filter = "grayscale(100%)"
+                        bird.classList.remove('animate__animated', 'animate__tada')
+                })
          } 
 }
 resetButton.addEventListener('click',gameReset)
 
 
-//POST LEVEL PLAY FUNCTIONALITY 
+//POST LEVEL PLAY FUNCTIONALITY  ---------------------------------------------------->
 const postGameClick = (event) => {
         const playerBirdChoice = event.target.id
 
@@ -184,7 +193,7 @@ const postGameClick = (event) => {
 }
 
 
-// EXTRA FUN! --- refactor this!
+// EXTRA FUN! --- refactor this! ---------------------------------------------------->
 const keyboardInputs = (event) => {                       
         
         switch (event.key){
@@ -221,8 +230,6 @@ const keyboardInputs = (event) => {
         }
         console.log(event)
 }   
-
-
 document.addEventListener('keydown', keyboardInputs)
 
 const keyboardDown = (event) => {                       
@@ -251,3 +258,4 @@ const keyboardDown = (event) => {
         }
 }   
 document.addEventListener('keyup', keyboardDown)
+

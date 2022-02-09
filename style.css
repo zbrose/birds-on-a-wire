@@ -50,14 +50,10 @@ h1 {
     display:flex;
     justify-content: center;
     align-items: center;
-    /* background-color: rgba(105, 12, 114, 0.541); */
     width: 600px;
     height: 150px;
     margin: 25px auto;
-    /* background-color: white; */
     border-radius: 50px;
-
-
 }
 
 #instructions {
@@ -68,12 +64,10 @@ h1 {
     
 }
 
-
 .top-row {
     display: flex;
     justify-content: space-evenly;
     height: 10vh;
-    /* background-color: rgba(69, 96, 216, 0.411); */
 }
 
 .level-box{
@@ -120,9 +114,8 @@ button{
 button:hover {
     background-color: rgba(255, 255, 255, 0.562);
     transition: 0.3s;
-   
-
 }
+
 button:active{
     background-color: rgb(0, 186, 243);
     color:white;
@@ -146,9 +139,7 @@ button:active{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* align-items: flex-start; */
     height: 30vh;
-    /* background-color: rgba(69, 216, 93, 0.411); */
 }
 
 #notation-display > img { 
@@ -158,14 +149,12 @@ button:active{
 
 .note-input{
     display: flex;
-    /* margin: 0 10rem; */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 17em;
     width: 25em;
-    /* background-color: rgba(255, 255, 255, 0.411); */
 }
 
 .display-c {
@@ -204,7 +193,6 @@ button:active{
 .bottom-row {
     display: flex;
     justify-content: space-evenly;
-    /* background-color: rgba(105, 12, 12, 0.411); */
 }    
 
 
@@ -233,6 +221,7 @@ button:active{
     bottom: 40px;
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
 }
+
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -247,3 +236,5 @@ button:active{
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
+
+  
