@@ -6,9 +6,13 @@
 
 
 // VARIABLES AND LISTENERS
-let solutionMelody = ['c','e','d','g'] 
+let easyMelody = ['c','e','d','g']
+// const mediumMelody = ['c','d','e','g']
+// const hardMelody = ['g','a','d','c']
 let playerChoiceMelody = []
 let tryCount = 0
+let levelCount = 1
+const birds = document.querySelectorAll('.bird')
 const noteInput =  document.querySelector('.note-input')
 const resetButton = document.getElementById('reset-button')
 const matchDisplay = document.getElementById('instructions')
@@ -29,17 +33,13 @@ const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteC
 // CLICK EVENT FUNCTION AND CONDITIONS    // store values in object OR switch case if statements
 function clickEvent (event) {
         const playerBirdChoice = event.target.id
-        let bird
-        console.log(event)
-
-        
         switch (playerBirdChoice){
          case 'bird1':
                 playerChoiceMelody.push('c')
                 const displayCNote = document.createElement('img')
                 displayCNote.src = 'ledgerlineqnote.png' 
                 displayCNote.classList.add('display-c','note','animate__animated','animate__fadeIn')
-                noteInput.appendChild(displayCNote)  // set timeout
+                noteInput.appendChild(displayCNote)
                 cNoteAudio.currentTime=0
                 cNoteAudio.play()
          break
@@ -51,8 +51,8 @@ function clickEvent (event) {
                 noteInput.appendChild(displayDNote)
                 dNoteAudio.currentTime=0
                 dNoteAudio.play()
-        break
-        case 'bird3':
+         break
+         case 'bird3':
                 playerChoiceMelody.push('e')
                 const displayENote = document.createElement('img')
                 displayENote.src = 'quarternote.png'
@@ -60,8 +60,8 @@ function clickEvent (event) {
                 noteInput.appendChild(displayENote)
                 eNoteAudio.currentTime=0
                 eNoteAudio.play()
-        break
-        case 'bird4':
+         break
+         case 'bird4':
                 playerChoiceMelody.push('g')
                 const displayGNote = document.createElement('img')
                 displayGNote.src = 'quarternote.png'
@@ -69,8 +69,8 @@ function clickEvent (event) {
                 noteInput.appendChild(displayGNote)
                 gNoteAudio.currentTime=0
                 gNoteAudio.play()
-        break
-        case 'bird5':
+         break
+         case 'bird5':
                 playerChoiceMelody.push('a')
                 const displayANote = document.createElement('img')
                 displayANote.src = 'quarternote.png'
@@ -82,51 +82,41 @@ function clickEvent (event) {
         }
                 
         // LOOKING FOR MATCHES CONDITIONAL
-        if (lookForMatches(playerChoiceMelody, solutionMelody)===true){
+        if (lookForMatches(playerChoiceMelody, easyMelody)===true){
 
                 
               setTimeout(function(){
                 document.getElementById('correct-sound').play()
                 matchDisplay.innerText = 'NICE WORK! Move on to the next level.'
+                resetButton.classList.add('reset-button-transform')
                 resetButton.innerText = "Next Level"
-                resetButton.style.height = '5rem'
-                resetButton.style.width = '15rem'
-                resetButton.style.backgroundColor = 'rgb(0, 186, 243)'
-                resetButton.style.color = 'white'
-                resetButton.style.fontSize = '30px'
-                document.querySelectorAll('.bird').forEach(bird => {
+                birds.forEach(bird => {
                         bird.style.filter = "grayscale(0%)"
                         bird.classList.add('animate__animated', 'animate__tada')
                  })
                 }, 500)
 
-                document.querySelectorAll('.bird').forEach(playerNoteChoice => {
+                birds.forEach(playerNoteChoice => {
                         playerNoteChoice.removeEventListener('mousedown', clickEvent)
                 })
-                document.querySelectorAll('.bird').forEach(playerNoteChoice => {
+                birds.forEach(playerNoteChoice => {
                         playerNoteChoice.addEventListener('mousedown', postGameClick)
                 })
 
                 
         
-        } else if (playerChoiceMelody.length === solutionMelody.length && lookForMatches(playerChoiceMelody, solutionMelody)===false) {
+        } else if (playerChoiceMelody.length === easyMelody.length && lookForMatches(playerChoiceMelody, easyMelody)===false) {
                 setTimeout(function(){
                         document.getElementById('wrong-sound').play()
                         matchDisplay.innerText = 'Shucks!  Not a match.  Try again?'
-                         tryCount++
-                         document.getElementById('try-count').innerText = 'Try Count: ' + tryCount
-                         playerChoiceMelody = []
-                         const nodeList = document.querySelectorAll('.note')
-                         while (noteInput.firstChild){
-                                noteInput.removeChild(noteInput.firstChild)
-                         }
-                         for (let i=0;i<nodeList.length;i++){
-                                nodeList[i].classList.remove('.note-c','note-d','note-e','note-g','note-a')
-                         }
+                        tryCount++
+                        document.getElementById('try-count').innerText = 'Try Count: ' + tryCount
+                        playerChoiceMelody = []
+                        while (noteInput.firstChild) noteInput.removeChild(noteInput.firstChild)
                         },500)
          }
         
-        lookForMatches(playerChoiceMelody, solutionMelody)
+        lookForMatches(playerChoiceMelody, easyMelody)
 }           
 
 
@@ -140,22 +130,28 @@ function lookForMatches (arr1, arr2) {
 
 //GAME RESET FUNCTION
 const gameReset = () =>{
-        if (resetButton.innerText === 'Reset'){
-         document.querySelectorAll('.bird').forEach(playerNoteChoice => {
-        playerNoteChoice.addEventListener('mousedown', clickEvent)
-        })
-        tryCount++
-        document.getElementById('try-count').innerText = 'Try Count: ' + tryCount
-        playerChoiceMelody = []
-        matchDisplay.innerText = 'Give it another go!'
-        const nodeList = document.querySelectorAll('.note')
-        while (noteInput.firstChild){
-                noteInput.removeChild(noteInput.firstChild)
-        }
-        for (let i=0;i<nodeList.length;i++){
-               nodeList[i].classList.remove('.note-c','note-d','note-e','note-g','note-a')
-         }
-        } else console.log('next level')
+        while (noteInput.firstChild) noteInput.removeChild(noteInput.firstChild)
+        birds.forEach(playerNoteChoice => playerNoteChoice.addEventListener('mousedown', clickEvent))
+
+        //GAME RESET BLOCK
+         if (resetButton.innerText === 'Reset'){
+                tryCount++
+                document.getElementById('try-count').innerText = 'Try Count: ' + tryCount
+                playerChoiceMelody = []
+                matchDisplay.innerText = 'Give it another go!'
+                
+        } else {
+        // NEXT LEVEL BLOCK
+                resetButton.classList.remove('reset-button-transform')
+                resetButton.innerText = 'Reset'
+                levelCount++
+                document.getElementById('level-display').innerText = 'Level: ' + levelCount
+                playerChoiceMelody = []
+                easyMelody = ['c','d','e','g']
+                //NEW MELODY TO BE RECORDED AND APPENDED TO PLAY BUTTON
+                birds.forEach(bird => bird.classList.add('.bird'))
+                
+         } 
 }
 resetButton.addEventListener('click',gameReset)
 
@@ -166,57 +162,92 @@ const postGameClick = (event) => {
 
         switch (playerBirdChoice){
         case 'bird1':
-                
                 cNoteAudio.currentTime=0
                 cNoteAudio.play()
         break
         case 'bird2':
-                
                 dNoteAudio.currentTime=0
                 dNoteAudio.play()
         break
         case 'bird3':
-                
                 eNoteAudio.currentTime=0
                 eNoteAudio.play()
         break
         case 'bird4':
-                
                 gNoteAudio.currentTime=0
                 gNoteAudio.play()
         break
         case 'bird5':
-                
                 aNoteAudio.currentTime=0
                 aNoteAudio.play()
-
         }
 }
 
 
-// EXTRA FUN!
+// EXTRA FUN! --- refactor this!
 const keyboardInputs = (event) => {                       
         
-        if(event.key === 'q') {
+        switch (event.key){
+        case 'q':
+                document.querySelector('#bird1').classList.add('animate__animated', 'animate__headShake')
+                document.querySelector('#bird1').style.filter = 'grayscale(0%)'
                 cNoteAudio.currentTime=0
-                cNoteAudio.play()       
-        }
-        if(event.key === 'w'){
+                cNoteAudio.play()  
+        break
+        case 'w':
+                document.querySelector('#bird2').classList.add('animate__animated', 'animate__headShake')
+                document.querySelector('#bird2').style.filter = 'grayscale(0%)'
                 dNoteAudio.currentTime=0
-                dNoteAudio.play()
-        } 
-        if(event.key === 'e'){
+                dNoteAudio.play()  
+        break
+        case 'e':
+                document.querySelector('#bird3').classList.add('animate__animated', 'animate__headShake')
+                document.querySelector('#bird3').style.filter = 'grayscale(0%)'
                 eNoteAudio.currentTime=0
-                eNoteAudio.play()
-        }
-        if(event.key ==='r'){
-                gNoteAudio.currentTime=0 
-                gNoteAudio.play()
-        }
-        if(event.key === 't'){
+                eNoteAudio.play()  
+        break
+        case 'r':
+                document.querySelector('#bird4').classList.add('animate__animated', 'animate__headShake')
+                document.querySelector('#bird4').style.filter = 'grayscale(0%)'
+                gNoteAudio.currentTime=0
+                gNoteAudio.play()  
+        break
+        case 't':
+                document.querySelector('#bird5').classList.add('animate__animated', 'animate__headShake')
+                document.querySelector('#bird5').style.filter = 'grayscale(0%)'
                 aNoteAudio.currentTime=0
-                aNoteAudio.play()
-        } 
+                aNoteAudio.play()  
+        
+        }
+        console.log(event)
 }   
 
+
 document.addEventListener('keydown', keyboardInputs)
+
+const keyboardDown = (event) => {                       
+        
+        switch (event.key){
+        case 'q':
+                document.querySelector('#bird1').classList.remove('animate__animated', 'animate__headShake')
+                document.querySelector('#bird1').style.filter = 'grayscale(100%)'
+        break
+        case 'w':
+                document.querySelector('#bird2').classList.remove('animate__animated', 'animate__headShake')
+                document.querySelector('#bird2').style.filter = 'grayscale(100%)'
+        break
+        case 'e':
+                document.querySelector('#bird3').classList.remove('animate__animated', 'animate__headShake')
+                document.querySelector('#bird3').style.filter = 'grayscale(100%)'
+        break
+        case 'r':
+                document.querySelector('#bird4').classList.remove('animate__animated', 'animate__headShake')
+                document.querySelector('#bird4').style.filter = 'grayscale(100%)' 
+        break
+        case 't':
+                document.querySelector('#bird5').classList.remove('animate__animated', 'animate__headShake')
+                document.querySelector('#bird5').style.filter = 'grayscale(100%)' 
+        
+        }
+}   
+document.addEventListener('keyup', keyboardDown)
