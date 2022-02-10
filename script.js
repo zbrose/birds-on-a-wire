@@ -22,6 +22,8 @@ const aNoteAudio = document.getElementById('a-note')
 
 const container = document.querySelector('.container')
 container.style.visibility = 'hidden'
+const heading = document.querySelector('h1')
+heading.style.visibility = 'visible'
 
 const startButton = document.querySelector('.start-button')
 const gameStart = () => {
@@ -29,6 +31,7 @@ const gameStart = () => {
         container.style.visibility = 'visible'
         container.classList.add('animate__animated', 'animate__fadeIn')
         document.getElementById('start-music').play()
+
         
 }
 startButton.addEventListener('click',gameStart)
