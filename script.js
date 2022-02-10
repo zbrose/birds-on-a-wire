@@ -38,6 +38,7 @@ const gameStart = () => {
         container.style.visibility = 'visible'
         container.classList.add('animate__animated', 'animate__fadeIn')
         document.getElementById('start-music').play()
+        
 }
 startButton.addEventListener('click',gameStart)
 

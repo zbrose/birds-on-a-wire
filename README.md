@@ -53,5 +53,6 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
 
 ## Resources
   - Bird artwork by Sarah Nelson - Instagram: @sarah_ann_nelson
-  - note and art png's online
+  - branch sign art by Ra20Ga downloaded from similarpng.com
+  - cloud background and notes png's downloaded from google images
   - Recorded sound effects by me

@@ -223,7 +223,6 @@ button:active{
 
 
 .bird {
-    margin: 2em auto;
     filter: grayscale(100%);
     transition: 0.3s;   
 }   
