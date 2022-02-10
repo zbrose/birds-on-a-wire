@@ -18,8 +18,20 @@ const cNoteAudio = document.getElementById('c-note')
 const dNoteAudio = document.getElementById('d-note') 
 const eNoteAudio = document.getElementById('e-note') 
 const gNoteAudio = document.getElementById('g-note') 
-const aNoteAudio = document.getElementById('a-note') 
+const aNoteAudio = document.getElementById('a-note')
 
+const container = document.querySelector('.container')
+container.style.visibility = 'hidden'
+
+const startButton = document.querySelector('.start-button')
+const gameStart = () => {
+        document.querySelector('body').removeChild(startButton)
+        container.style.visibility = 'visible'
+        container.classList.add('animate__animated', 'animate__fadeIn')
+        document.getElementById('start-music').play()
+        
+}
+startButton.addEventListener('click',gameStart)
 
 function playLevelOneMelody () {
        document.getElementById('melody').play()
@@ -85,7 +97,7 @@ function clickEvent (event) {
         }
                 
         // LOOKING FOR MATCHES CONDITIONAL---------------------------------------------------->
-        if (lookForMatches(playerChoiceMelody, easyMelody)===true){
+        if (lookForMatches(playerChoiceMelody, easyMelody)===true && levelCount === 1){
 
                 
               setTimeout(function(){
@@ -108,7 +120,27 @@ function clickEvent (event) {
 
                 
         
-        } else if (playerChoiceMelody.length === easyMelody.length && lookForMatches(playerChoiceMelody, easyMelody)===false) {
+        }   if (lookForMatches(playerChoiceMelody, easyMelody)===true && levelCount === 2){
+                birds.forEach(playerNoteChoice => {
+                        playerNoteChoice.removeEventListener('mousedown', clickEvent)
+                })
+                birds.forEach(playerNoteChoice => {
+                        playerNoteChoice.addEventListener('mousedown', postGameClick)
+                })
+                
+                setTimeout(function(){
+                  document.getElementById('correct-sound').play()
+                  matchDisplay.innerText = "YOU'RE THE MELODY MASTER! Thanks for playing."
+                  resetButton.classList.add('reset-button-transform')
+                  resetButton.innerText = "More Levels Coming Soon"
+                  birds.forEach(bird => {
+                          bird.style.filter = "grayscale(0%)"
+                          bird.classList.add('animate__animated', 'animate__tada')
+                   })
+                  }, 500)
+                  
+          
+          } else if (playerChoiceMelody.length === easyMelody.length && lookForMatches(playerChoiceMelody, easyMelody)===false) {
                 setTimeout(function(){
                         document.getElementById('wrong-sound').play()
                         matchDisplay.innerText = 'Shucks!  Not a match.  Try again?'
@@ -134,17 +166,18 @@ function lookForMatches (arr1, arr2) {
 //GAME RESET FUNCTION ---------------------------------------------------->
 const gameReset = () =>{
         while (noteInput.firstChild) noteInput.removeChild(noteInput.firstChild)
-        birds.forEach(playerNoteChoice => playerNoteChoice.addEventListener('mousedown', clickEvent))
-
+        
         //GAME RESET BLOCK 
-         if (resetButton.innerText === 'Reset'){
+        if (resetButton.innerText === 'Reset'){
+                 birds.forEach(playerNoteChoice => playerNoteChoice.addEventListener('mousedown', clickEvent))
                 tryCount++
                 document.getElementById('try-count').innerText = 'Try Count: ' + tryCount
                 playerChoiceMelody = []
                 matchDisplay.innerText = 'Give it another go!'
                 
-        } else {
+        } else if(resetButton.innerText === 'Next Level'){
         // NEXT LEVEL BLOCK
+                 birds.forEach(playerNoteChoice => playerNoteChoice.addEventListener('mousedown', clickEvent))
                 resetButton.classList.remove('reset-button-transform')
                 resetButton.innerText = 'Reset'
                 levelCount++
@@ -160,7 +193,11 @@ const gameReset = () =>{
                         bird.style.filter = "grayscale(100%)"
                         bird.classList.remove('animate__animated', 'animate__tada')
                 })
-         } 
+        } else if (resetButton.innerText === "More Levels Coming Soon"){
+                // birds.forEach(bird => {
+                //         bird.classList.add('animate__animated', 'animate__headShake')
+                //  })
+        }
 }
 resetButton.addEventListener('click',gameReset)
 

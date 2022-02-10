@@ -9,10 +9,10 @@ body {
 
 .tree-branch-sign {
     position: absolute;
-    width: 1000px;
     top: 12%;
     left: 53%;
     transform: translate(-50%, -50%);
+    width: 1000px;
     margin: 0 auto;
     opacity: 0.9;
 }
@@ -23,6 +23,8 @@ body {
     opacity: 0.7;
     filter: blur(3px) 
 }
+
+
 .container {
     position: absolute;
     width: 100%;
@@ -34,6 +36,10 @@ body {
 }
 
 h1 {
+    /* position: absolute;
+    top: 1%;
+    left: 30%;
+    transform: translate(-50%, -50%); */
     position:relative;
     right: 170px;
     bottom: 10px;
@@ -103,12 +109,17 @@ button{
     
 }
 
-.reset-button-transform {
+.start-button{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 5rem;
-    width: 15rem;
-    background-color: rgb(0, 186, 243);
-    color: white;
-    font-size: 30px;
+    width: 30rem;
+    font-size: xx-large;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: rgb(121, 75, 59 )
 }
 
 button:hover {
@@ -121,6 +132,23 @@ button:active{
     color:white;
     transition: 0.1s;
 }
+.reset-button-transform {
+    height: 5rem;
+    width: 15rem;
+    background-color: rgb(0, 186, 243);
+    color: white;
+    font-size: 30px;
+}
+
+
+.reset-button-transform:hover{
+    background-color: rgba(0, 186, 243, 0.5);
+}
+.reset-button-transform:active{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 186, 243);
+}
+
 
 #play-melody{
     height: 5rem;
@@ -129,8 +157,8 @@ button:active{
 }
 
 #play-relative{
-    height: 5rem;
-    width: 15rem;
+    height: 3vh;
+    width: 10vw;
     font-size: x-large;
 }
 
