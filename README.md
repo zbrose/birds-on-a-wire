@@ -21,9 +21,9 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
 
 ![song birds](https://user-images.githubusercontent.com/97310057/152473456-58e32f14-0022-4c2b-b780-a639838dfe45.jpg)
 
-![song birds finished] (https://raw.githubusercontent.com/zbrose/sei-projectone-song-birds/main/Images/song-birds-finished.png)
+![song birds finished](Images/song-birds-finished.png)
 
-## MPV Goals
+## MVP Goals
   - Get all button functionality working
   - Display correct combo or win conditions and note choices in real time.
   - Successfully have an audio component when you click a key or button
@@ -31,7 +31,7 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - Successfully add notes to musical staff in order produced
   - Record and utilize audio components
 
-## Potential Roadblock
+## Potential Roadblocks
   - Not being able to get audio working 
   - making game animated and fun to play
   - tracking and measuring win conditions
