@@ -1,8 +1,8 @@
 
-// refactor code 
-// randomly generate array numbers or strings for multiple levels on next level button - sound files attached to array values
-// keyboard section up and down presses refactor
-
+// play melody button and play C note not working on others screens
+// title is wonky on smaller broswers ---- its the sign not the text
+// resize nuttons to be fixed and bettter looking
+// greyscale not working over birds on level two
 
 // VARIABLES AND LISTENERS ---------------------------------------------------->
 let easyMelody = ['c','e','d','g']
@@ -123,7 +123,7 @@ function clickEvent (event) {
 
                 
         
-        }   if (lookForMatches(playerChoiceMelody, easyMelody)===true && levelCount === 2){
+        } else if (lookForMatches(playerChoiceMelody, easyMelody)===true && levelCount === 2){
                 birds.forEach(playerNoteChoice => {
                         playerNoteChoice.removeEventListener('mousedown', clickEvent)
                 })
@@ -173,14 +173,13 @@ const gameReset = () =>{
         //GAME RESET BLOCK 
         if (resetButton.innerText === 'Reset'){
                  birds.forEach(playerNoteChoice => playerNoteChoice.addEventListener('mousedown', clickEvent))
-                tryCount++
                 document.getElementById('try-count').innerText = 'Try Count: ' + tryCount
                 playerChoiceMelody = []
                 matchDisplay.innerText = 'Give it another go!'
                 
         } else if(resetButton.innerText === 'Next Level'){
         // NEXT LEVEL BLOCK
-                 birds.forEach(playerNoteChoice => playerNoteChoice.addEventListener('mousedown', clickEvent))
+                birds.forEach(playerNoteChoice => playerNoteChoice.addEventListener('mousedown', clickEvent))
                 resetButton.classList.remove('reset-button-transform')
                 resetButton.innerText = 'Reset'
                 levelCount++
@@ -192,15 +191,11 @@ const gameReset = () =>{
                 document.getElementById('play-melody').addEventListener('mousedown',()=>{
                         document.getElementById('level-two-audio').play()})
                 birds.forEach(bird => {
-                        bird.classList.add('.bird')
                         bird.style.filter = "grayscale(100%)"
+                        // bird.classList.add('.bird')
                         bird.classList.remove('animate__animated', 'animate__tada')
                 })
-        } else if (resetButton.innerText === "More Levels Coming Soon"){
-                // birds.forEach(bird => {
-                //         bird.classList.add('animate__animated', 'animate__headShake')
-                //  })
-        }
+        } else if (resetButton.innerText === "More Levels Coming Soon"){}
 }
 resetButton.addEventListener('click',gameReset)
 
