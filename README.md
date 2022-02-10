@@ -19,9 +19,9 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   
 # Wireframe & Progress
 
-![song birds ](https://user-images.githubusercontent.com/97310057/152473456-58e32f14-0022-4c2b-b780-a639838dfe45.jpg)
+![song birds](https://user-images.githubusercontent.com/97310057/152473456-58e32f14-0022-4c2b-b780-a639838dfe45.jpg)
 
-<img src="file:///Users/zachbrose/Desktop/Screen%20Shot%202022-02-10%20at%209.49.45%20AM.png">
+![song birds finished] (song-birds-finished.png)
 
 ## MPV Goals
   - Get all button functionality working

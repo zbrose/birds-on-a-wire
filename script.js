@@ -20,6 +20,13 @@ const eNoteAudio = document.getElementById('e-note')
 const gNoteAudio = document.getElementById('g-note') 
 const aNoteAudio = document.getElementById('a-note')
 
+const playRelativePitch = document.getElementById('play-relative').addEventListener('mousedown',()=>{
+                document.getElementById('relative-pitch').play()})
+
+const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteChoice => {
+        playerNoteChoice.addEventListener('mousedown', clickEvent)
+ })
+
 const container = document.querySelector('.container')
 container.style.visibility = 'hidden'
 const heading = document.querySelector('h1')
@@ -31,8 +38,6 @@ const gameStart = () => {
         container.style.visibility = 'visible'
         container.classList.add('animate__animated', 'animate__fadeIn')
         document.getElementById('start-music').play()
-
-        
 }
 startButton.addEventListener('click',gameStart)
 
@@ -41,12 +46,7 @@ function playLevelOneMelody () {
 }
 document.getElementById('play-melody').addEventListener('mousedown',playLevelOneMelody)
 
-const playRelativePitch = document.getElementById('play-relative').addEventListener('mousedown',()=>{
-                document.getElementById('relative-pitch').play()})
 
-const playerNoteChoices = document.querySelectorAll('.bird').forEach(playerNoteChoice => {
-        playerNoteChoice.addEventListener('mousedown', clickEvent)
- })
 
 // CLICK EVENT FUNCTION AND CONDITIONS ---------------------------------------------------->
 function clickEvent (event) {
@@ -191,8 +191,7 @@ const gameReset = () =>{
                 document.getElementById('play-melody').addEventListener('mousedown',()=>{
                         document.getElementById('level-two-audio').play()})
                 birds.forEach(bird => {
-                        bird.style.filter = "grayscale(100%)"
-                        // bird.classList.add('.bird')
+                        bird.style.filter = ''
                         bird.classList.remove('animate__animated', 'animate__tada')
                 })
         } else if (resetButton.innerText === "More Levels Coming Soon"){}
@@ -272,23 +271,23 @@ const keyboardDown = (event) => {
         switch (event.key){
         case 'q':
                 document.querySelector('#bird1').classList.remove('animate__animated', 'animate__headShake')
-                document.querySelector('#bird1').style.filter = 'grayscale(100%)'
+                document.querySelector('#bird1').style.filter = ''
         break
         case 'w':
                 document.querySelector('#bird2').classList.remove('animate__animated', 'animate__headShake')
-                document.querySelector('#bird2').style.filter = 'grayscale(100%)'
+                document.querySelector('#bird2').style.filter = ''
         break
         case 'e':
                 document.querySelector('#bird3').classList.remove('animate__animated', 'animate__headShake')
-                document.querySelector('#bird3').style.filter = 'grayscale(100%)'
+                document.querySelector('#bird3').style.filter = ''
         break
         case 'r':
                 document.querySelector('#bird4').classList.remove('animate__animated', 'animate__headShake')
-                document.querySelector('#bird4').style.filter = 'grayscale(100%)' 
+                document.querySelector('#bird4').style.filter = '' 
         break
         case 't':
                 document.querySelector('#bird5').classList.remove('animate__animated', 'animate__headShake')
-                document.querySelector('#bird5').style.filter = 'grayscale(100%)' 
+                document.querySelector('#bird5').style.filter = '' 
         
         }
 }   
