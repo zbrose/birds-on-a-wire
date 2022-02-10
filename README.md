@@ -2,7 +2,12 @@
 
 _Song Birds_ is an educational music game that helps you improve your ear for melodies.  The player is able to control five birds, each one assigned a single musical note that sounds when you select a bird at the bottom of the screen. The object of the game is to listen to a playback of a melody and match the melody using your birds' beautiful singing voices and your own ears. 
 
-## Technical Execution
+## Technologies Used
+  - DOM API
+  - Logic Pro X for recorded sound
+  - CSS and HTML
+
+## Execution
   - Used DOM api for functionality 
   - Created a layout using CSS grid laying out the game display and wireframe elements
   - Created a buttons that lets the user play audio for the problem melody and notes
@@ -23,13 +28,13 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
 
 ![song birds finished](Images/song-birds-finished.png)
 
-## MVP Goals
-  - Get all button functionality working
-  - Display correct combo or win conditions and note choices in real time.
-  - Successfully have an audio component when you click a key or button
-  - Successfully track and execute win conditions function
-  - Successfully add notes to musical staff in order produced
-  - Record and utilize audio components
+## MVP Goals Reached
+  - all button functionality working
+  - Displays win conditions and note choices in real time.
+  - Successfully added an audio component when you click a key or button
+  - Successfully tracked and execute win conditions function
+  - Successfully added notes to musical staff in order produced
+  - Recorded and utilized audio components
 
 ## Potential Roadblocks
   - Not being able to get audio working 
@@ -50,6 +55,10 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - Styling for different screen sizes was challenging given the image elements
   - Hit a roadblock trying to refactor code for each click event
   - Placing notes on the staff and fixing them there was challenging
+
+  # Ongoing goals
+  -  formatting only fits browsers and the moment but would like to include mobile
+  -  more levels with more diffulties and added notes or keys
 
 ## Resources
   - Bird artwork by Sarah Nelson - Instagram: @sarah_ann_nelson

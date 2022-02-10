@@ -11,24 +11,15 @@
 </head>
 <body>
     
-    
-    
     <img class="clouds" src="./Images/clouds background.jpeg" alt="clouds">
     <img class="tree-branch-sign" src="./Images/Tree-branch-with-wooden-sign-on-transparent-background-PNG.png" alt="Tree Branch Sign">
     <button class="start-button"> Click here to start! </button>
+    
     <div class="container">
-        
-        
-        <audio id='start-music' src="./Audio/game_start_strum.wav"></audio>
-     
-        
-        
-        <header>
-               
 
-                <h1 class="animate__animated animate__fadeInUpBig"> Song Birds </h1>
-                <p id="instructions"> Press the 'play/repeat melody' button and listen carefully to the melody.  Then, click on your birds to match the melody's pitches!</p>  
-                 
+         <header>
+            <h1 class="animate__animated animate__fadeInUpBig"> Song Birds </h1>
+            <p id="instructions"> Press the 'play/repeat melody' button and listen carefully to the melody.  Then, click on your birds to match the melody's pitches!</p>  
         </header>
        
         <div class="top-row">
@@ -42,11 +33,8 @@
          </div>
         
        
-                <img id="notation-display" src="Images/musicstaff.png"  alt="Music Staff"/>
-                <div class="note-input">
-                    <!-- appending img children -->
-
-                </div>
+        <img id="notation-display" src="Images/musicstaff.png"  alt="Music Staff"/>
+        <div class="note-input"></div>
       
         <div class="bottom-row">
             <div>
@@ -84,9 +72,7 @@
     <audio id="wrong-sound" src="./Audio/wrong_sound.wav"></audio>
     <audio id="correct-sound" src="./Audio/correct_sound.wav"></audio>
     <audio id="level-two-audio" src="./Audio/problem_melody_2.wav"></audio>
-
- 
-
+    <audio id='start-music' src="./Audio/game_start_strum.wav"></audio>
 </body>
 <script src="script.js"></script>
 </html>

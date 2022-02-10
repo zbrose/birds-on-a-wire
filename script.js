@@ -1,9 +1,4 @@
 
-// play melody button and play C note not working on others screens
-// title is wonky on smaller broswers ---- its the sign not the text
-// resize nuttons to be fixed and bettter looking
-// greyscale not working over birds on level two
-
 // VARIABLES AND LISTENERS ---------------------------------------------------->
 let easyMelody = ['c','e','d','g']
 let playerChoiceMelody = []
