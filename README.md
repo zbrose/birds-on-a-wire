@@ -5,7 +5,7 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
 ## Technologies Used
   - DOM API
   - Logic Pro X for recorded sound
-  - CSS and HTML
+  -  JS CSS and HTML
 
 ## Execution
   - Used DOM api for functionality 
