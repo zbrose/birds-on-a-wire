@@ -36,7 +36,7 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - Successfully added notes to musical staff in order produced
   - Recorded and utilized audio components
 
-## Potential Roadblocks
+## Pre-execution Roadblocks
   - Not being able to get audio working 
   - making game animated and fun to play
   - tracking and measuring win conditions
@@ -44,9 +44,9 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - getting musical notation to display correctly and in order of key stroke
 
 ## Stretch Goals Completed
-  - Create more than one level
-  - Create a landing page
-  - animate birds and notes more fully
+  - Created more than one level
+  - Created a landing page
+  - animated birds and notes more fully
   - have animated bird celebration if user wins 
   - secret-menu item keyboard controls at QWERT
 
@@ -57,7 +57,7 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - Placing notes on the staff and fixing them there was challenging
 
   # Ongoing goals
-  -  formatting only fits browsers and the moment but would like to include mobile
+  -  formatting only fits browsers and the moment but would like to include smaller screens and mobile
   -  more levels with more diffulties and added notes or keys
 
 ## Resources
