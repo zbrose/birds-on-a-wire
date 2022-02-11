@@ -67,3 +67,5 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - branch sign art by Ra20Ga downloaded from similarpng.com
   - cloud background and notes png's downloaded from google images
   - Recorded sound effects by me
+  - google fonts
+  - animate.css
