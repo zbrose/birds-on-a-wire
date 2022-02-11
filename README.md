@@ -28,6 +28,8 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
 
 ![song birds finished](Images/song-birds-finished.png)
 
+![code highlight](Images/code-highlight-1.png)
+
 ## MVP Goals Reached
   - all button functionality working
   - Displays win conditions and note choices in real time.
