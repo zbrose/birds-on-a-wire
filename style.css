@@ -6,6 +6,23 @@ body {
     text-align: center;
     margin: 0;
 }
+.landing-page {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 30px;
+    position: relative;
+    bottom:1100px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 800px;
+}
+
+ol{
+    list-style-type: none;
+
+}
 
 .tree-branch-sign {
     position: absolute;

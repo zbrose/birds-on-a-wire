@@ -15,6 +15,7 @@ const eNoteAudio = document.getElementById('e-note')
 const gNoteAudio = document.getElementById('g-note') 
 const aNoteAudio = document.getElementById('a-note')
 
+
 const playRelativePitch = document.getElementById('play-relative').addEventListener('mousedown',()=>{
                 document.getElementById('relative-pitch').play()})
 
@@ -29,6 +30,7 @@ heading.style.visibility = 'visible'
 
 const startButton = document.querySelector('.start-button')
 const gameStart = () => {
+        document.querySelector('.landing-page').style.visibility = 'hidden'
         document.querySelector('body').removeChild(startButton)
         container.style.visibility = 'visible'
         container.classList.add('animate__animated', 'animate__fadeIn')

@@ -2,6 +2,8 @@
 
 _Song Birds_ is an educational music game that helps you improve your ear for melodies.  The player is able to control five birds, each one assigned a single musical note that sounds when you select a bird at the bottom of the screen. The object of the game is to listen to a playback of a melody and match the melody using your birds' beautiful singing voices and your own ears. 
 
+Link to game: https://zbrose.github.io/sei-projectone-song-birds/
+
 ## Technologies Used
   - Flexbox layout
   - Logic Pro X for recorded sound
@@ -58,7 +60,7 @@ _Song Birds_ is an educational music game that helps you improve your ear for me
   - Hit a roadblock trying to refactor code for each click event
   - Placing notes on the staff and fixing them there was challenging
 
-  # Ongoing goals
+  ## Ongoing goals
   -  formatting only fits browsers and the moment but would like to include smaller screens and mobile
   -  more levels with more diffulties and added notes or keys
 
