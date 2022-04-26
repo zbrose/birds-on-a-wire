@@ -11,29 +11,17 @@
 </head>
 <body>
     
-    <img class="clouds" src="./Images/clouds background.jpeg" alt="clouds">
+    <!-- <img class="clouds" src="./Images/clouds background.jpeg" alt="clouds"> -->
     <img class="tree-branch-sign" src="./Images/Tree-branch-with-wooden-sign-on-transparent-background-PNG.png" alt="Tree Branch Sign">
     <button class="start-button"> Click here to start! </button>
 
-    <div class="landing-page">
-        <h2>Welcome to Song Birds!</h2>
-        <p> Song birds is a game designed to help you improve your ear for musical melodies.</p>
-        <p>The object of the game is to listen to a short melody and try to match it using your birds and their corresponding musical note. </p>
-        <ol> <strong>Here's how it works:</strong>
-            <li>Press the 'play/repeat melody button' and listen carefully to the melody.</li>
-            <li>Then, click on your birds at the bottom of the screen to try and match the pitches!</li>
-        </ol>
-        <p>You can try out a few combinations of notes using the 'QWERT' keys on your keyboard before answering.</p>
-        <p>You may also want to use the 'play C note' button as a place of reference for your budding ear.  It'll help you if you get lost!</p>
-        <p>When you're ready, click on the wooden sign to start!</p>
 
-    </div>
     
     <div class="container">
 
          <header>
-            <h1 class="animate__animated animate__fadeInUpBig"> Song Birds </h1>
-            <p id="instructions"> Press the 'play/repeat melody' button and listen carefully to the melody.  Then, click on your birds to match the melody's pitches!</p>  
+            <h1> Song Birds </h1>
+            <p id="instructions"> Press the 'play/repeat melody' button and listen carefully to the melody.  Then, click on your birds to match the melody's pitches!</p> 
         </header>
        
         <div class="top-row">
@@ -44,6 +32,24 @@
             <button id="play-melody">Play/Repeat Melody</button>
             <button id="play-relative">Play C Note</button>
             <button id="reset-button">Reset</button>
+            <button class="trigger">Instructions</button>
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    
+                    <h2>Welcome to Song Birds!</h2>
+                    <p> Song birds is a game designed to help you improve your ear for musical melodies.</p>
+                    <p>The object of the game is to listen to a short melody and try to match it using your birds and their corresponding musical note. </p>
+                    <ol> <strong>Here's how it works:</strong>
+                        <li>Press the 'play/repeat melody' button and listen carefully to the melody.</li>
+                        <li>Then, click on your birds at the bottom of the screen to try and match the pitches!</li>
+                    </ol>
+                    <p>You can try out a few combinations of notes using the 'QWERT' keys on your keyboard before answering.</p>
+                    <p>You may also want to use the 'play C note' button as a place of reference for your budding ear.  It'll help you if you get lost!</p>
+                    <p>When you're ready, click on the wooden sign to start!</p>
+
+                </div>
+            </div>
          </div>
         
        

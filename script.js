@@ -30,12 +30,11 @@ heading.style.visibility = 'visible'
 
 const startButton = document.querySelector('.start-button')
 const gameStart = () => {
-        document.querySelector('.landing-page').style.visibility = 'hidden'
+        // document.querySelector('.landing-page').style.visibility = 'hidden'
         document.querySelector('body').removeChild(startButton)
         container.style.visibility = 'visible'
         container.classList.add('animate__animated', 'animate__fadeIn')
-        document.getElementById('start-music').play()
-        
+        document.getElementById('start-music').play()  
 }
 startButton.addEventListener('click',gameStart)
 
@@ -43,6 +42,27 @@ function playLevelOneMelody () {
        document.getElementById('melody').play()
 }
 document.getElementById('play-melody').addEventListener('mousedown',playLevelOneMelody)
+
+
+//MODAL CONTROLS----------------------------------------------------------->
+
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
 
 
 
