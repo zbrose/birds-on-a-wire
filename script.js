@@ -151,9 +151,9 @@ function clickEvent (event) {
                 
                 setTimeout(function(){
                   document.getElementById('correct-sound').play()
-                  matchDisplay.innerText = "YOU'RE THE MELODY MASTER! Thanks for playing."
+                  matchDisplay.innerText = "YOU'RE THE MELODY MASTER! More Levels Coming Soon!"
                   resetButton.classList.add('reset-button-transform')
-                  resetButton.innerText = "More Levels Coming Soon"
+                  resetButton.innerText = "Nice!"
                   birds.forEach(bird => {
                           bird.style.filter = "grayscale(0%)"
                           bird.classList.add('animate__animated', 'animate__tada')
