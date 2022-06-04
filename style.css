@@ -509,14 +509,14 @@ button:active{
         .display-g {
             position: relative;
             width: 30px;
-            top: -5px;
+            top: -10px;
             left: 40px;
             padding: 0px 20px;
         }
         .display-a {
             position: relative;
             width: 30px;
-            top: -20px;
+            top: -17px;
             left: 40px;
             padding: 0px 20px;
         }
@@ -592,6 +592,7 @@ button:active{
 
         .trigger {
             width: 100px;
+            font-size: 1.1em;
         }
     
         #play-melody{
